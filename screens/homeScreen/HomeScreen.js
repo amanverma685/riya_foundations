@@ -46,10 +46,10 @@ const HomeScreen = () => {
   const seeAll = () => {
     console.log('Button clicked!');
   };
-
-
     return(
-      <View className="  flex-1 flex-col bg-gray-200">
+      
+        
+        <View className="  flex-1 flex-col bg-gray-200">
         <View className=" flex-1 px-2 py-2 ">
             <Image
             className="h-full w-full rounded-3xl"
@@ -100,7 +100,8 @@ const HomeScreen = () => {
         <View className="flex-1 bg-green-300">
           
         </View>
-      </View>
+        </View>
+      
     );
   
 }

@@ -11,7 +11,7 @@ const LoginScreen = ({ navigation }) => {
     console.log(email);
     console.log(password);
     
-    navigation.navigate('HomeScreen');
+    navigation.navigate('LandingScreen');
     // if (1) {
     //   Alert.alert('Invalid Login', 'Please enter valid email and password.');
     // }
