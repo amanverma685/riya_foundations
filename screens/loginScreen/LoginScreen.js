@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet,Alert } from 'react-native';
 import axios from 'axios';
+import InputComponent from '../../Components/InputComponent';
 
 
 const LoginScreen = ({ navigation }) => {
@@ -18,6 +19,7 @@ const LoginScreen = ({ navigation }) => {
     const headers = {
       'Content-Type': 'application/json',
     };
+    console.log(email,password);
 
     try {
       const response = await axios.post(`https://673a-106-51-164-14.ngrok-free.app/api/user/authenticate`,cred,{headers});
@@ -39,20 +41,22 @@ const LoginScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Login</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Email"
-        value={email}
-        onChangeText={setEmail}
-        keyboardType="email-address"
+      
+      <InputComponent className="mt-4"
+      placeholder="example@email.com"
+      value={email}
+      onChangeMethod={setEmail}
+      keyboardType="email-address"
+      secureTextEntry={false}
       />
-      <TextInput
-        style={styles.input}
-        placeholder="Password"
-        value={password}
-        onChangeText={setPassword}
-        secureTextEntry
+      <InputComponent 
+      className="mt-4"
+      placeholder="example@password"
+      value={password}
+      onChangeMethod={setPassword}
+      secureTextEntry={true}
       />
+      
       <Button title="Submit" onPress={handleLogin} />
     </View>
   );

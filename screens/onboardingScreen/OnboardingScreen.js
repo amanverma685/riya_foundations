@@ -116,7 +116,7 @@ const OnboardingScreen = ({navigation}) => {
               <TouchableOpacity
                 style={styles.btn}
                 
-                onPress={() => navigation.replace('RegistrationScreen')}>
+                onPress={() => navigation.replace('LoginScreen')}>
                 <Text style={{fontWeight: 'bold', fontSize: 15, color:'white'}}>
                   GET STARTED
                 </Text>
