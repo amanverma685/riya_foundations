@@ -2,7 +2,8 @@
 module.exports = {
   content: ["./screens/homeScreen/HomeScreen.js",
             "./screens/loginScreen/LoginScreen.js",
-            "./screens/onboardingScreen/OnboardingScreen.js"
+            "./screens/onboardingScreen/OnboardingScreen.js",
+            "./screens/exploreScreen/ExploreSreen.js"
             ],
   theme: {
     extend: {},

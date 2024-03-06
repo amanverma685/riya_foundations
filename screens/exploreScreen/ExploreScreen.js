@@ -1,10 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import Header from '../../Components/HeaderComponent'
 
-const ExploreScreen = () => {
+const ExploreScreen = ({navigation}) => {
   return (
     <View>
-      <Text>ExploreScreen</Text>
+      <Header title="Explore" onPressBack={() => navigation.goBack()} />
+
     </View>
   )
 }

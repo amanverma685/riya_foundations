@@ -11,6 +11,7 @@ import {
   Dimensions,
 } from 'react-native';
 import LoginScreen from '../loginScreen/LoginScreen';
+import RegisterationScreen from '../registerationScreen/RegisterationScreen';
 
 const {width, height} = Dimensions.get('window');
 
@@ -115,7 +116,7 @@ const OnboardingScreen = ({navigation}) => {
               <TouchableOpacity
                 style={styles.btn}
                 
-                onPress={() => navigation.replace('LoginScreen')}>
+                onPress={() => navigation.replace('RegistrationScreen')}>
                 <Text style={{fontWeight: 'bold', fontSize: 15, color:'white'}}>
                   GET STARTED
                 </Text>

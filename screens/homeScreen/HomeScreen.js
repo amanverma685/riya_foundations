@@ -4,8 +4,10 @@ import { FlatList,TouchableOpacity } from 'react-native'
 import { LinearGradient } from 'react-native-svg'
 import { Ionicons } from '@expo/vector-icons'
 import axios from 'axios';
+import Header from '../../Components/HeaderComponent'
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
+  
 
   const [quote, setQuote] = useState(null);
 
@@ -35,7 +37,6 @@ const HomeScreen = () => {
       if (response.data && response.data.length > 0) {
 
         setQuote(response.data); // Set the first quote to the state
-        console.log(quote)
       }
     } catch (error) {
       console.error('Error fetching quote:', error);
@@ -80,7 +81,7 @@ const HomeScreen = () => {
  
             </View>
             <View className="flex flex-col justify-center bg">
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() =>{} } >
                     <Ionicons name="chevron-forward-outline" size={64} color="white" ></Ionicons>
                 </TouchableOpacity>
               </View>

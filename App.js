@@ -6,9 +6,10 @@ import HomeScreen from './screens/homeScreen/HomeScreen';
 import LoginScreen from './screens/loginScreen/LoginScreen';
 import ProfileScreen from './screens/profileScreen/ProfileScreen';
 import OnboardingScreen from './screens/onboardingScreen/OnboardingScreen';
-import RegisterScreen from './screens/registerScreen/RegisterScreen';
 import LandingScreen from './screens/landingScreen/LandingScreen';
 import ExploreScreen from './screens/exploreScreen/ExploreScreen';
+import QuizScreen from './screens/quizScreen/QuizScreen';
+import RegisterationScreen from './screens/registerationScreen/RegisterationScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -44,8 +45,8 @@ export default function App() {
         }}
       />
       <Stack.Screen
-        name="RegisterScreen"
-        component={RegisterScreen}
+        name="RegistrationScreen"
+        component={RegisterationScreen}
         options={{
           headerShown:false,
           title: 'Awesome app',
@@ -59,6 +60,22 @@ export default function App() {
           title: 'Awesome app',
         }}
       />    
+      <Stack.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={{
+          headerShown:false,
+          title: 'Awesome app',
+        }}
+      />    
+      <Stack.Screen
+        name="QuizScreen"
+        component={QuizScreen}
+        options={{
+          headerShown:false,
+          title: 'Awesome app',
+        }}
+      />   
     </Stack.Navigator>
   </NavigationContainer>
   );

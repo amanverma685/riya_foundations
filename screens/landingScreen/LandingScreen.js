@@ -56,7 +56,7 @@ export default function LandingScreen({navigation}) {
       <Ionicons
         name={icon}
         size={25}
-        color={routeName === selectedTab ? 'black' : 'red'}
+        color={routeName === selectedTab ? 'black' : 'white'}
       />
     );
   };
@@ -79,7 +79,7 @@ export default function LandingScreen({navigation}) {
         shadowStyle={styles.shawdow}
         height={50}
         circleWidth={40}
-        bgColor="gray"
+        bgColor="cyan"
         initialRouteName="HomeScreen"
         borderTopLeftRight
         renderCircle={({ selectedTab, navigate }) => (
@@ -88,7 +88,7 @@ export default function LandingScreen({navigation}) {
               style={styles.button}
               onPress={() =>navigation.navigate('ExploreScreen') }
             >
-              <Ionicons name={'apps-sharp'} color="gray" size={25} />
+              <Ionicons name={'apps-sharp'} color="black" size={25} />
             </TouchableOpacity>
           </Animated.View>
         )}
@@ -126,7 +126,7 @@ export const styles = StyleSheet.create({
     padding: 20,
   },
   shawdow: {
-    shadowColor: '#DDDDDD',
+    shadowColor: '#D9FA7C',
     shadowOffset: {
       width: 0,
       height: 0,
@@ -145,7 +145,7 @@ export const styles = StyleSheet.create({
     borderRadius: 30,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#E8E8E8',
+    backgroundColor: 'cyan',
     bottom: 30,
     shadowColor: '#000',
     shadowOffset: {
@@ -159,7 +159,7 @@ export const styles = StyleSheet.create({
   imgCircle: {
     width: 30,
     height: 30,
-    tintColor: 'gray',
+    tintColor: '#D9FA7C',
   },
   tabbarItem: {
     flex: 1,
@@ -170,12 +170,5 @@ export const styles = StyleSheet.create({
     width: 30,
     height: 30,
   },
-  screen1: {
-    flex: 1,
-    backgroundColor: '#BFEFFF',
-  },
-  screen2: {
-    flex: 1,
-    backgroundColor: '#FFEBCD',
-  },
+  
 });
