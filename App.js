@@ -8,7 +8,7 @@ import ProfileScreen from './screens/profileScreen/ProfileScreen';
 import OnboardingScreen from './screens/onboardingScreen/OnboardingScreen';
 import LandingScreen from './screens/landingScreen/LandingScreen';
 import ExploreScreen from './screens/exploreScreen/ExploreScreen';
-import QuizScreen from './screens/quizScreen/QuizScreen';
+import QuizScreen from './screens/registerationScreen/quizScreen/QuizScreen';
 import RegisterationScreen from './screens/registerationScreen/RegisterationScreen';
 
 const Stack = createNativeStackNavigator();
