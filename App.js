@@ -23,7 +23,6 @@ export default function App() {
         name="OnboardingScreen"
         component={OnboardingScreen}
         options={{
-          headerShown:false,
           title: 'Onboarding',
           headerShown:false
         }}
@@ -67,7 +66,8 @@ export default function App() {
           headerShown:false,
           title: 'Awesome app',
         }}
-      />    
+      /> 
+
       <Stack.Screen
         name="QuizScreen"
         component={QuizScreen}

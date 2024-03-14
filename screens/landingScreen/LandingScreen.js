@@ -77,9 +77,9 @@ export default function LandingScreen({navigation}) {
         type="DOWN"
         style={styles.bottomBar}
         shadowStyle={styles.shawdow}
-        height={50}
+        height={55}
         circleWidth={40}
-        bgColor="cyan"
+        bgColor="#05445E"
         initialRouteName="HomeScreen"
         borderTopLeftRight
         renderCircle={({ selectedTab, navigate }) => (
@@ -88,7 +88,7 @@ export default function LandingScreen({navigation}) {
               style={styles.button}
               onPress={() =>navigation.navigate('ExploreScreen') }
             >
-              <Ionicons name={'apps-sharp'} color="black" size={25} />
+              <Ionicons name={'apps-sharp'} color="beige" size={25} />
             </TouchableOpacity>
           </Animated.View>
         )}
@@ -138,14 +138,16 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
   },
-  bottomBar: {},
+  bottomBar: {
+    color:'#05445E'
+  },
   btnCircleUp: {
     width: 60,
     height: 60,
     borderRadius: 30,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'cyan',
+    backgroundColor: '#05445E',
     bottom: 30,
     shadowColor: '#000',
     shadowOffset: {
