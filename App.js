@@ -8,14 +8,17 @@ import ProfileScreen from './screens/profileScreen/ProfileScreen';
 import OnboardingScreen from './screens/onboardingScreen/OnboardingScreen';
 import LandingScreen from './screens/landingScreen/LandingScreen';
 import ExploreScreen from './screens/exploreScreen/ExploreScreen';
-import QuizScreen from './screens/registerationScreen/quizScreen/QuizScreen';
+import QuizScreen from './quizScreen/QuizScreen';
 import RegisterationScreen from './screens/registerationScreen/RegisterationScreen';
+import BookAppointment from './screens/bookAppointmentScreen/BookAppointmentScreen';
+import AppointmentScreen from './screens/appointmentScreen/AppointmentScreen';
 
 const Stack = createNativeStackNavigator();
 
 
 export default function App() {
   return (
+    
     <NavigationContainer>
       <Stack.Navigator
         initialRouteName="OnboardingScreen" >
@@ -36,6 +39,14 @@ export default function App() {
         }}
       />
       <Stack.Screen
+        name="AppointmentScreen"
+        component={AppointmentScreen}
+        options={{
+          headerShown:false,
+          title: 'Login',
+        }}
+      />
+      <Stack.Screen
         name="LandingScreen"
         component={LandingScreen}
         options={{
@@ -50,7 +61,15 @@ export default function App() {
           headerShown:false,
           title: 'Awesome app',
         }}
-      />      
+      />    
+      <Stack.Screen
+        name="BookAppointmentScreen"
+        component={BookAppointment}
+        options={{
+          headerShown:false,
+          title: 'Awesome app',
+        }}
+      />        
       <Stack.Screen
         name="ExploreScreen"
         component={ExploreScreen}

@@ -1,32 +1,46 @@
-import { View, Text,FlatList } from 'react-native';
-import React from 'react'
-import Header from '../../Components/HeaderComponent'
-import Card from '../../Components/CardComponent'
-import { data } from '../../data/courses'
+import { View, Text, FlatList, Button, ScrollView } from 'react-native';
+import React from 'react';
+import Header from '../../Components/HeaderComponent';
+import Card from '../../Components/CardComponent';
+import { data } from '../../data/courses';
 
-const ExploreScreen = ({navigation}) => {
-
+const ExploreScreen = ({ navigation }) => {
   const onPressHandler = null;
 
   const renderItem = ({ item }) => {
-    return (<Card title={item.title} description={item.description} imageSource={item.image} onPress={onPressHandler}  />);
+    return (
+      <Card
+        title={item.title}
+        description={item.description}
+        imageSource={item.image}
+        onPress={onPressHandler}
+      />
+    );
   };
 
   return (
-    <View className="flex-1 flex-col">
-      <Header title="Know Yourself Better" onPressBack={() => navigation.goBack()} />
-      <View >
-        <FlatList
-            data={data}
-            renderItem={renderItem}
-            keyExtractor={(item, index) => index.toString()}
-            numColumns={2}
-            horizontal={false} // Set to true for horizontal scroll
+    <View>
+      <View>
+        <Header title="Mindful Modules" onPressBack={() => navigation.goBack()} />
+        </View>
+      
+        <Button
+          style={{ padding: 10 }}
+          title="Book an appointment"
+          onPress={() => navigation.push('BookAppointmentScreen')}
+          color="pink"
         />
+      
+      <FlatList
+        data={data}
+        renderItem={renderItem}
+        keyExtractor={(item, index) => index.toString()}
+        numColumns={2}
+        horizontal={false}
+      />
       </View>
-     
-    </View>
-  )
-}
+    
+  );
+};
 
 export default ExploreScreen;

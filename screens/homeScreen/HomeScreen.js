@@ -8,6 +8,8 @@ import Header from '../../Components/HeaderComponent';
 import { LineChart } from "react-native-chart-kit";
 import { graphData } from '../../data/graphData'
 import GraphComponent from '../../Components/GraphComponent'
+
+
 const HomeScreen = ({navigation}) => {
 
   
@@ -43,11 +45,12 @@ const HomeScreen = ({navigation}) => {
   
 
   const seeAll = () => {
-    navigation.replace("QuizScreen");
+    navigation.navigate("QuizScreen");
   };
 
       return(
-        <View className="  flex-1 flex-col bg-gray-200">
+        
+        <View className="  flex-1 flex-col bg-white">
         <View className=" px-2 py-2 ">
             <Image
             className=" h-48 w-full rounded-3xl"
@@ -55,7 +58,7 @@ const HomeScreen = ({navigation}) => {
             resizeMode="cover"
             />
         </View> 
-        <View className=" flex-1">
+        <View className=" flex-1 bg-white">
 
           <View className=" h-8 mb-2 flex-row justify-between">
             <View >
@@ -68,7 +71,6 @@ const HomeScreen = ({navigation}) => {
               <View className="flex-col flex-1 justify-between">
                 <View className="flex-1">
                   <Text className=" text-xl  mx-1 font-extrabold text-white ">Test your stress Level</Text>
-                  <Text className=" text-md mx-1  text-white">Take up the assessment and get to know yourself better!</Text>
                 </View>
               </View>
  
@@ -94,6 +96,7 @@ const HomeScreen = ({navigation}) => {
         <GraphComponent />
         </View>
         </View>
+        
       
     );
   

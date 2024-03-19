@@ -22,4 +22,6 @@ export const  data =[{
     "id":6,
     "title":"Social Anxiety",
     "image":"https://img.freepik.com/premium-vector/hand-drawn-house-plants-illustration_23-2150176590.jpg"
-  }]
+  },
+  // 
+]
