@@ -6,7 +6,8 @@ module.exports = {
             "./screens/onboardingScreen/OnboardingScreen.js",
             "./screens/exploreScreen/ExploreSreen.js",
             "./screens/profileScreen/ProfileSreen.js",
-            "./screens/AppointmentScreen/AppointmentSreen.js",
+            "./screens/appointmentScreen/AppointmentSreen.js",
+            
             "./Components/GraphComponent.js"
             ],
   theme: {

@@ -1,10 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-const Card = ({ title, description, imageSource, onPress }) => {
+const Card = ({ id,title, description, imageSource, navigation }) => {
+
+  const onCardPress= () =>{
+      navigation.navigate('CourseHomeScreen',{ param1: id, param2: title })
+  }
   return (
-    <TouchableOpacity onPress={onPress} style={styles.card}>
-      <Image   source={{
+    <TouchableOpacity onPress={onCardPress} style={styles.card}>
+      <Image source={{
           uri: imageSource,
         }} style={styles.image} />
       <View style={styles.textContainer}>

@@ -81,7 +81,7 @@ const HomeScreen = ({navigation}) => {
                 </TouchableOpacity>
               </View>
           </View>
-          <Text className="font-extrabold mt-2 ml-3 mb-2 text-lg">Glance over these beautiful quotes!</Text>
+          <Text className=" mt-2 ml-3 mb-2 text-lg">Glance over these beautiful quotes!</Text>
           
           <View className="flex-1  mx-1  rounded-3xl ">
             <FlatList

@@ -9,7 +9,7 @@ const Header = ({ title, onPressBack }) => {
       <TouchableOpacity onPress={onPressBack} style={{ paddingRight: 10 }}>
       <Ionicons name="chevron-forward-outline" size={25} color="black" ></Ionicons>
       </TouchableOpacity>
-      <Text style={{ fontSize: 18, marginLeft:70,  fontWeight: 'bold' }}>{title}</Text>
+      <Text style={{ fontSize: 18,  fontWeight: 'bold' }}>{title}</Text>
     </View>
   );
 };

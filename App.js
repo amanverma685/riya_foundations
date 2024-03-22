@@ -12,6 +12,7 @@ import QuizScreen from './quizScreen/QuizScreen';
 import RegisterationScreen from './screens/registerationScreen/RegisterationScreen';
 import BookAppointment from './screens/bookAppointmentScreen/BookAppointmentScreen';
 import AppointmentScreen from './screens/appointmentScreen/AppointmentScreen';
+import CourseHomeScreen from './screens/courseHomeScreen/CourseHomeScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,7 +22,7 @@ export default function App() {
     
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="OnboardingScreen" >
+        initialRouteName="ExploreScreen" >
         <Stack.Screen
         name="OnboardingScreen"
         component={OnboardingScreen}
@@ -44,6 +45,14 @@ export default function App() {
         options={{
           headerShown:false,
           title: 'Login',
+        }}
+      />
+      <Stack.Screen
+        name="CourseHomeScreen"
+        component={CourseHomeScreen}
+        options={{
+          headerShown:false,
+          title: 'CourseHomeScreen',
         }}
       />
       <Stack.Screen

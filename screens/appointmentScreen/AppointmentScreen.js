@@ -53,9 +53,9 @@ const AppointmentScreen = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
-    backgroundColor:'white',
-    marginTop:10,
+    padding: 10,
+    //backgroundColor:'white',
+   
   },
   tabContainer: {
     flexDirection: 'row',

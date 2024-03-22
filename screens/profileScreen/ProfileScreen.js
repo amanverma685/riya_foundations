@@ -58,12 +58,12 @@ const ProfileScreen = ({ navigation }) => {
         {showAccountDetails && (
           
           <View style={styles.accountDetails}>
-            <InputComponent placeholder="Name" value="" onChangeMethod={null} />
-            <InputComponent placeholder="Email" value="" onChangeMethod={null} keyboardType='email' />
+            <InputComponent placeholder="Name" value="" onChangeMethod={null} keyboardType='default' />
+            <InputComponent placeholder="Email" value="" onChangeMethod={null} keyboardType='email-address' />
             <InputComponent placeholder="Phone Number" value="" onChangeMethod={null} keyboardType='numeric' />
-            <InputComponent placeholder="Address" value="" onChangeMethod={null} />
-            <InputComponent placeholder="Gender" value="" onChangeMethod={null} />
-            <InputComponent placeholder="Date of Birth" value="" onChangeMethod={null} />
+            <InputComponent placeholder="Address" value="" onChangeMethod={null}  keyboardType='default' />
+            <InputComponent placeholder="Gender" value="" onChangeMethod={null}  keyboardType='default'  />
+            <InputComponent placeholder="Date of Birth" value="" onChangeMethod={null}  keyboardType='default'  />
 
             {/* Add more account details as needed */}
           </View>

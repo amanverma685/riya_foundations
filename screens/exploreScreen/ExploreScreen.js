@@ -1,20 +1,21 @@
-import { View, Text, FlatList, Button, ScrollView } from 'react-native';
+import { View, Text, FlatList, Button, ScrollView,StyleSheet} from 'react-native';
 import React from 'react';
 import Header from '../../Components/HeaderComponent';
 import Card from '../../Components/CardComponent';
 import { data } from '../../data/courses';
 
 const ExploreScreen = ({ navigation }) => {
-  const onPressHandler = null;
+  
 
   const renderItem = ({ item }) => {
     return (
       <Card
+        id ={item.id}
         title={item.title}
         description={item.description}
         imageSource={item.image}
-        onPress={onPressHandler}
-      />
+        navigation={navigation}
+      />  
     );
   };
 
@@ -23,9 +24,8 @@ const ExploreScreen = ({ navigation }) => {
       <View>
         <Header title="Mindful Modules" onPressBack={() => navigation.goBack()} />
         </View>
-      
         <Button
-          style={{ padding: 10 }}
+          style={styles.shortButton} // Apply the custom style here
           title="Book an appointment"
           onPress={() => navigation.push('BookAppointmentScreen')}
           color="pink"
@@ -42,5 +42,10 @@ const ExploreScreen = ({ navigation }) => {
     
   );
 };
+const styles = StyleSheet.create({
+  shortButton: {
+    width: 150, 
+  },
+});
 
 export default ExploreScreen;
