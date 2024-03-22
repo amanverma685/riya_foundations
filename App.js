@@ -8,11 +8,12 @@ import ProfileScreen from './screens/profileScreen/ProfileScreen';
 import OnboardingScreen from './screens/onboardingScreen/OnboardingScreen';
 import LandingScreen from './screens/landingScreen/LandingScreen';
 import ExploreScreen from './screens/exploreScreen/ExploreScreen';
-import QuizScreen from './quizScreen/QuizScreen';
+import QuizScreen from './screens/quizScreen/QuizScreen';
 import RegisterationScreen from './screens/registerationScreen/RegisterationScreen';
-import BookAppointment from './screens/bookAppointmentScreen/BookAppointmentScreen';
 import AppointmentScreen from './screens/appointmentScreen/AppointmentScreen';
 import CourseHomeScreen from './screens/courseHomeScreen/CourseHomeScreen';
+import DoctorsDetailScreen from './screens/bookAppointmentScreen/DoctorsDetailScreen';
+import BookAppointmentScreen from './screens/bookAppointmentScreen/BookAppointmentScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -73,12 +74,20 @@ export default function App() {
       />    
       <Stack.Screen
         name="BookAppointmentScreen"
-        component={BookAppointment}
+        component={BookAppointmentScreen}
         options={{
           headerShown:false,
           title: 'Awesome app',
         }}
-      />        
+      /> 
+      <Stack.Screen
+        name="DoctorsDetailScreen"
+        component={DoctorsDetailScreen}
+        options={{
+          headerShown:false,
+          title: 'Awesome app',
+        }}
+      />         
       <Stack.Screen
         name="ExploreScreen"
         component={ExploreScreen}

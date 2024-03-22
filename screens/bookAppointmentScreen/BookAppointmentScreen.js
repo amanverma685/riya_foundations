@@ -1,29 +1,24 @@
-import React from 'react';
-import { View, Text, FlatList, ScrollView } from 'react-native';
-import { doctorData } from '../../data/doctorData';
-import DoctorCard from '../../Components/DoctorCard';
+import { View, Text, ScrollView } from 'react-native'
+import React from 'react'
+import { useRoute } from '@react-navigation/native';
 import Header from '../../Components/HeaderComponent';
 
-const BookAppointmentScreen = ({ navigation }) => {
-  const renderItem = ({ item }) => {
-    return <DoctorCard doctorData={item} />;
-  };
-
+const BookAppointmentScreen = ({navigation}) => {
+    const route = useRoute();
+  const { param } = route.params;
+  console.log(param)
   return (
-    <View style={{ flex: 1 }}>
-      <Header title="Book Appointments" onPressBack={() => navigation.goBack()} />
-      
-        <FlatList
-          className="bg-white"
-          data={doctorData}
-          renderItem={renderItem}
-          keyExtractor={(item, index) => index.toString()}
-          horizontal={false}
-          //stickyHeaderIndices={[0]} // Make the first item (header) sticky
-        />
-     
-    </View>
-  );
-};
+    <ScrollView>
+        <View className="flex flex-1 mt-6 bg-red-300">
+            <View className="basis-1/14">
+                <Header onPressBack={() => navigation.goBack()} title="Book Your Appointment"/>
+            </View>
+            <View className="basis-2/4 bg-red-300">
+                
+            </View>
+        </View>
+    </ScrollView>
+  )
+}
 
-export default BookAppointmentScreen;
+export default BookAppointmentScreen
