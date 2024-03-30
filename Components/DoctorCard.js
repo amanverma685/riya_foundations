@@ -2,16 +2,16 @@ import { View, Text,StyleSheet,Image,Modal } from 'react-native'
 import React, { useState } from 'react'
 
 const DoctorCard = ({doctorData}) => {
-    
+    // console.log(doctorData);
     
   return (
     
       <View style={styles.cardContainer}>
-        <Image source={{ uri: doctorData.image }} style={styles.image} />
+        <Image source={{ uri: "https://www.shutterstock.com/image-photo/profile-photo-attractive-family-doc-600nw-1724693776.jpg" }} style={styles.image} />
         <View style={styles.infoContainer}>
-          <Text style={styles.name}>{doctorData.name}</Text>
+          <Text style={styles.name}>{doctorData.firstName} {doctorData.middleName} {doctorData.lastName}</Text>
           <Text>{`Experience: ${doctorData.experience}`}</Text>
-          <Text>{`Consultation Fee: ${doctorData.consultation_fee}`}</Text>
+          <Text>{`Consultation Fee: Rs.${doctorData.consultationFee}`}</Text>
         </View>
       </View>
   );

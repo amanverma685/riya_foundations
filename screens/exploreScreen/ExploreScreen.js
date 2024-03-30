@@ -3,9 +3,10 @@ import React from 'react';
 import Header from '../../Components/HeaderComponent';
 import Card from '../../Components/CardComponent';
 import { data } from '../../data/courses';
+import { baseUrl } from '../../data/baseUrl';
 
 const ExploreScreen = ({ navigation }) => {
-  
+ 
 
   const renderItem = ({ item }) => {
     

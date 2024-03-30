@@ -6,11 +6,12 @@ module.exports = {
             "./screens/onboardingScreen/OnboardingScreen.js",
             "./screens/exploreScreen/ExploreSreen.js",
             "./screens/profileScreen/ProfileSreen.js",
-            "./screens/appointmentScreen/BookAppointmentSreen.js",
-            "./screens/appointmentScreen/DoctorDetailScreen.js",
+            "./screens/bookAppointmentScreen/BookAppointmentSreen.js",
+            "./screens/bookAppointmentScreen/DoctorsDetailScreen.js",
             "./screens/courseHomeScreen/CourseHomeScreen.js",
             "./Components/GraphComponent.js",
-            "./Components/CoursesCardComponent.js"
+            "./Components/CoursesCardComponent.js",
+            "./Components/ButtonComponent.js",
             ],
   theme: {
     extend: {},
