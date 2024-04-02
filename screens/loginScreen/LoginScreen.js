@@ -39,7 +39,7 @@ const LoginScreen = ({ navigation }) => {
       Alert.alert('Error', 'Failed to fetch data');
     }
 
-    // navigation.navigate('LandingScreen');
+    navigation.navigate('LandingScreen');
     
     // if (1) {
     //   Alert.alert('Invalid Login', 'Please enter valid email and password.');

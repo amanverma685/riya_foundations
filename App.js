@@ -14,6 +14,7 @@ import AppointmentScreen from './screens/appointmentScreen/AppointmentScreen';
 import CourseHomeScreen from './screens/courseHomeScreen/CourseHomeScreen';
 import DoctorsDetailScreen from './screens/bookAppointmentScreen/DoctorsDetailScreen';
 import BookAppointmentScreen from './screens/bookAppointmentScreen/BookAppointmentScreen';
+import CommunityScreen from './screens/communityScreen/CommunityScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -104,6 +105,14 @@ export default function App() {
           title: 'Awesome app',
         }}
       /> 
+      <Stack.Screen
+        name="CommunityScreen"
+        component={CommunityScreen}
+        options={{
+          headerShown:false,
+          title: 'Login',
+        }}
+      />
 
       <Stack.Screen
         name="QuizScreen"

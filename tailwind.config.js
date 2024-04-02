@@ -12,6 +12,7 @@ module.exports = {
             "./Components/GraphComponent.js",
             "./Components/CoursesCardComponent.js",
             "./Components/ButtonComponent.js",
+            "./screens/communityScreen/CommunityScreen.js",
             ],
   theme: {
     extend: {},
